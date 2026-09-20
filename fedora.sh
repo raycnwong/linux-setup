@@ -57,10 +57,10 @@ if [ ! -d ~/.tmux/plugins/tmux-resurrect ]; then
   git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
 fi
 
-if [ ! -d ~/Developer/chunnamwong/dotfiles ]; then
-  mkdir -p ~/Developer/chunnamwong
-  git clone https://github.com/chunnamwong/dotfiles.git ~/Developer/chunnamwong/dotfiles
-  pushd ~/Developer/chunnamwong/dotfiles
+if [ ! -d ~/Developer/raycnwong/dotfiles ]; then
+  mkdir -p ~/Developer/raycnwong
+  git clone https://github.com/raycnwong/dotfiles.git ~/Developer/raycnwong/dotfiles
+  pushd ~/Developer/raycnwong/dotfiles
   stow . -t ~
   popd
 fi
