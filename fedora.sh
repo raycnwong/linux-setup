@@ -1,5 +1,6 @@
 #!/bin/bash
 
+timedatectl set-local-rtc 0
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.interface clock-format 24h
 gsettings set org.gnome.desktop.interface font-antialiasing 'rgba'
