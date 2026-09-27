@@ -34,6 +34,7 @@ sudo dnf install -y intel-media-driver
 sudo dnf install -y rpmfusion-nonfree-release-tainted
 sudo dnf --repo=rpmfusion-nonfree-tainted install -y "*-firmware"
 
+sudo dnf install -y fzf
 sudo dnf install -y rsms-inter-fonts
 
 if [ ! -f ~/.local/share/fonts/HackNerdFontMono-Regular.ttf ]; then
@@ -47,6 +48,8 @@ if [ ! -f ~/.zshrc ]; then
   sudo dnf install -y zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   echo 'alias vi=nvim' >>~/.zshrc
+  git clone https://github.com/raycnwong/worktree.git ~/.oh-my-zsh/custom/plugins/worktree
+  sed -i 's/plugins=(git)/plugins=(git worktree)/' ~/.zshrc
 fi
 
 sudo dnf install -y alacritty
