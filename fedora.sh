@@ -73,6 +73,10 @@ if [ ! -d ~/.tmux/plugins/tmux-resurrect ]; then
   git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
 fi
 
+if [ ! -d ~/.config/herdr ]; then
+  mkdir -p ~/.config/herdr
+fi
+
 if [ ! -d ~/Developer/raycnwong/dotfiles ]; then
   mkdir -p ~/Developer/raycnwong
   git clone https://github.com/raycnwong/dotfiles.git ~/Developer/raycnwong/dotfiles
