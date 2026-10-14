@@ -50,6 +50,18 @@ if [ ! -f ~/.zshrc ]; then
   echo 'alias vi=nvim' >>~/.zshrc
   git clone https://github.com/raycnwong/worktree.git ~/.oh-my-zsh/custom/plugins/worktree
   sed -i 's/plugins=(git)/plugins=(git worktree)/' ~/.zshrc
+  git clone https://github.com/sindresorhus/pure.git ~/.oh-my-zsh/custom/themes/pure
+  sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME=""/' ~/.zshrc
+  cat <<'EOF' >>~/.zshrc
+if [[ -z $AI_AGENT$AGENT$CLAUDECODE$CURSOR_AGENT$GEMINI_CLI$OPENCODE$CODEX_THREAD_ID$CODEX_SANDBOX$CODEX_CI ]]; then
+  fpath+=~/.oh-my-zsh/custom/themes/pure
+  autoload -U promptinit; promptinit
+  prompt pure
+else
+  PROMPT='%(?..[%?] )%d $ '
+  RPROMPT=''
+fi
+EOF
 fi
 
 sudo dnf install -y alacritty
