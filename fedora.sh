@@ -34,6 +34,7 @@ sudo dnf install -y intel-media-driver
 sudo dnf install -y rpmfusion-nonfree-release-tainted
 sudo dnf --repo=rpmfusion-nonfree-tainted install -y "*-firmware"
 
+sudo dnf install -y gcc
 sudo dnf install -y fzf
 sudo dnf install -y rsms-inter-fonts
 
